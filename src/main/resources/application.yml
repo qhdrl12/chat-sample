@@ -1,0 +1,16 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  r2dbc:
+    url: r2dbc:h2:file:///./build/data/testdb;USER=sa;PASSWORD=password
+  rsocket:
+    server:
+      transport: websocket
+      mapping-path: /rsocket
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
